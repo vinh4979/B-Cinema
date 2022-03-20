@@ -1,5 +1,6 @@
 import { Fragment } from 'react'
 import { Route } from 'react-router'
+import Footer from 'src/main/components/Footer.component/Footer'
 import NavBar from 'src/main/components/Navbar.component/NavBar'
 
 export const ProfileTemplate = props => {
@@ -13,7 +14,7 @@ export const ProfileTemplate = props => {
           <Fragment>
             <NavBar {...propsRoute} />
             <Component {...propsRoute} />
-            <h1>Footer</h1>
+            <Footer />
           </Fragment>
         )
       }}

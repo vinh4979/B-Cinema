@@ -70,7 +70,7 @@ export const ModalReducer = (state = stateDefault, action) => {
       state.isModalShow = action.isModalShow
       state.message = 'SIGN UP SUCCESS !'
       state.message2 = action.message
-      state.type = 'Success'
+      state.type = 'Success-SignUp'
 
       return { ...state }
     }

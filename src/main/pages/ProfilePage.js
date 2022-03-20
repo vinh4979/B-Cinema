@@ -26,7 +26,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     dispatch(ThongTinTaiKhoanAction(userProfile.taiKhoan))
-  }, [])
+  }, [dispatch, userProfile.taiKhoan])
 
   const [isProfileUpdate, setIsProfileUpdate] = useState(false)
   const [isContinue, setIsContinue] = useState(false)
@@ -161,7 +161,7 @@ const Wrapper = styled.div`
     padding: 0.5rem 0;
   }
   @media screen and (min-width: 768px) {
-    padding: 5rem 0 0;
+    padding: 7rem 0 0;
     .profile__main {
       margin: 0 10rem;
     }

@@ -95,7 +95,11 @@ export default function AlertModal({
               </div>
             </div>
           )}
-          {!(type === 'Success' || type === 'Success-booking') ? null : (
+          {!(
+            type === 'Success' ||
+            type === 'Success-booking' ||
+            type === 'Success-SignUp'
+          ) ? null : (
             <div className="success">
               <div className="check-icon">
                 <span className="icon-line line-tip" />
@@ -154,6 +158,21 @@ export default function AlertModal({
                 type="button"
                 className="btn btn-paying"
                 onClick={handleCloseModal}
+              >
+                GO ON
+              </button>
+            )}
+            {type === 'Success-SignUp' && (
+              <button
+                type="button"
+                className="btn btn-paying"
+                onClick={() => {
+                  history.push('/signin')
+                  dispatch({
+                    type: CLOSE_MODAL,
+                    isModalShow: false
+                  })
+                }}
               >
                 GO ON
               </button>
